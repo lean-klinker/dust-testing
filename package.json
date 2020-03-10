@@ -1,0 +1,12 @@
+{
+  "name": "dust-testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "25.1.0"
+  },
+  "dependencies": {
+    "dustjs-linkedin": "2.7.5"
+  }
+}
