@@ -1,18 +1,19 @@
-const path = require('path');
-const { getByTestId } = require('@testing-library/dom');
+import path from 'path';
+import { getByTestId } from '@testing-library/dom';
+import { setupTemplate, renderTemplate, cleanup, loadPartials } from '../testing';
 
 const TEMPLATE_NAME = 'SIMPLE';
 describe('Simple', () => {
     let container;
 
-    beforeEach(() => {
+    beforeEach(async () => {
+        await loadPartials();
         setupTemplate(path.resolve(__dirname, 'simple.dust'), TEMPLATE_NAME);
-        setupTemplate(path.resolve(__dirname, 'anchor.dust'), 'anchor');
     });
 
     it('shows the correct text', async () => {
         container = await renderTemplate(TEMPLATE_NAME);
-        
+
         expect(container).toHaveTextContent('Bob');
     });
 
@@ -23,5 +24,5 @@ describe('Simple', () => {
         expect(getByTestId(container, 'my-link')).toHaveAttribute('href', 'https://google.com');
     });
 
-    afterEach(() => container.remove());
+    afterEach(() => cleanup(container));
 });

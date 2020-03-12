@@ -7,11 +7,15 @@
     "test": "jest"
   },
   "devDependencies": {
+    "@babel/core": "7.8.7",
+    "@babel/preset-env": "7.8.7",
     "@testing-library/dom": "6.15.0",
     "@testing-library/jest-dom": "5.1.1",
+    "babel-jest": "25.1.0",
     "jest": "25.1.0",
     "jsdom": "16.2.1",
-    "jsdom-global": "3.0.2"
+    "jsdom-global": "3.0.2",
+    "recursive-readdir": "2.2.2"
   },
   "dependencies": {
     "dustjs-linkedin": "2.7.5"
