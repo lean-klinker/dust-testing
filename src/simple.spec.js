@@ -1,5 +1,5 @@
 import path from 'path';
-import { getByTestId } from '@testing-library/dom';
+import { getByTestId, getByText } from '@testing-library/dom';
 import { setupTemplate, renderTemplate, cleanup, loadPartials } from '../testing';
 
 const TEMPLATE_NAME = 'SIMPLE';
@@ -15,6 +15,7 @@ describe('Simple', () => {
         container = await renderTemplate(TEMPLATE_NAME);
 
         expect(container).toHaveTextContent('Bob');
+        expect(getByText(container, 'Bob').getAttribute('class')).toContain('header');
     });
 
     it('should show link', async () => {
