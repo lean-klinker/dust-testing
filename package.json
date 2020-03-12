@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
   "devDependencies": {
-    "jest": "25.1.0"
+    "@testing-library/dom": "6.15.0",
+    "@testing-library/jest-dom": "5.1.1",
+    "jest": "25.1.0",
+    "jsdom": "16.2.1",
+    "jsdom-global": "3.0.2"
   },
   "dependencies": {
     "dustjs-linkedin": "2.7.5"
