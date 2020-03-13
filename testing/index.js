@@ -1,6 +1,8 @@
 import fs from 'fs';
+import dust from 'dustjs-linkedin';
 import recursive from 'recursive-readdir';
 import path from 'path';
+import { addHelpers } from '../src/shared/helpers';
 
 const srcPath = path.resolve(__dirname, '..', 'src')
 const sharedPath = path.resolve(srcPath, 'shared');
@@ -32,6 +34,7 @@ export function setupTemplate(path, name) {
 
 export function renderTemplate(template, data = {}) {
     return new Promise((resolve, reject) => {
+        addHelpers(dust);
         dust.render(template, data, (err, output) => {
             if (err) {
                 reject(err);
