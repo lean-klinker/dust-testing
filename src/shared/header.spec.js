@@ -12,7 +12,7 @@ describe('header', () => {
 
     it('should show header', async () => {
         container = await renderTemplate(TEMPLATE_NAME, { text: 'Hello' });
-        
+
         expect(container).toHaveTextContent('Hello');
     });
 

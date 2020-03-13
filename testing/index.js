@@ -1,8 +1,6 @@
 import fs from 'fs';
 import recursive from 'recursive-readdir';
 import path from 'path';
-import dust from 'dustjs-linkedin';
-import { template } from '@babel/core';
 
 const srcPath = path.resolve(__dirname, '..', 'src')
 const sharedPath = path.resolve(srcPath, 'shared');

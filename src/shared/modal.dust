@@ -1,0 +1,12 @@
+<div class="modal">
+    <h2 class="modal-title" data-testid="modal-title">
+        {title}
+    </h2>
+    <div class="modal-content" data-testid="modal-content">
+        {$content}
+    </div>
+    <div data-testid="modal-footer">
+        <button data-testid="ok-btn">Ok</button>
+        <button data-testid="cancel-btn">Cancel</button>
+    </div>
+</div>

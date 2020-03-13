@@ -1,3 +1,9 @@
 {>"shared/header" text="Bob" /}
 
 {>"shared/anchor" href="https://google.com" text="go here" testId="my-link" /}
+
+{@shared name="shared/modal" title="this is a title"}
+<div data-testid="hacker-modal">
+    hacker
+</div>
+{/shared}
