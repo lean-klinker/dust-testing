@@ -1,6 +1,6 @@
 {@shared name="shared/header" text="Bob" /}
 
-{@shared name="shared/anchor" href="https://google.com" text="go here" testId="my-link" /}
+{> "shared/anchor" href="https://google.com" text="go here" testId="my-link" /}
 
 {@shared name="shared/modal" title="this is a title"}
     {@shared name="shared/anchor"
@@ -8,3 +8,6 @@
              text="hacker"
              testId="hacker-modal" /}
 {/shared}
+<p>
+    {name}
+</p>

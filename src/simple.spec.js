@@ -32,5 +32,11 @@ describe('Simple', () => {
         expect(getByTestId(container, 'modal-title')).toHaveTextContent('this is a title');
     })
 
+    it('should do something useful with data', async () => {
+        container = await renderTemplate(TEMPLATE_NAME, { name: 'bobby' })
+
+        expect(container).toHaveTextContent('bobby');
+    })
+
     afterEach(() => cleanup(container));
 });
